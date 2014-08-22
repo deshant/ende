@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ende</string>
+    <string name="hello_world">oops !</string>
+    <string name="action_settings">Settings</string>
+    <string name="intro">ENcrypter-DEcrypter</string>
+    <string name="caesar">Caesar Cipher</string>
+    <string name="title_activity_caesar">Caesar Cipher</string>
+    <string name="info">Type your text and press encrypt/decrypt to get the result</string>
+    <string name="key">key :</string>
+    <string name="encrypt">ENcrypt</string>
+    <string name="decrypt">DEcrypt</string>
+    <string name="or">OR</string>
+    <string name="title_activity_c_crypted">ENcrypted</string>
+    <string name="title_activity_c_decrypted">DEcrypted</string>
+    <string name="txt">text :</string>
+
+</resources>
