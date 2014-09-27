@@ -2,15 +2,15 @@ package deshant.ende;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-//import android.os.Build;
+import android.widget.Toast;
 
 public class Caesar extends ActionBarActivity {
 
@@ -27,18 +27,9 @@ public class Caesar extends ActionBarActivity {
 		}
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.caesar, menu);
-		return true;
-	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			return true;
@@ -58,7 +49,12 @@ public class Caesar extends ActionBarActivity {
     	
     	if ((text == null || text.isEmpty() || text.equals("")) || (key == null || key.isEmpty() || key.equals("")))
     	{
-    		//do nothing
+    		Context context = getApplicationContext();
+    		CharSequence pop = "input not valid !";
+    		int duration = Toast.LENGTH_SHORT;
+
+    		Toast toast = Toast.makeText(context, pop, duration);
+    		toast.show();
     	}
     	else
     	{
@@ -69,7 +65,7 @@ public class Caesar extends ActionBarActivity {
     	}
     }
     
-	/** Called when the user clicks the encrypt button */
+	/** Called when the user clicks the decrypt button */
     public void decrypt(View view) {
         Intent intent = new Intent(this, C_decrypted.class);
         
@@ -81,7 +77,12 @@ public class Caesar extends ActionBarActivity {
     	
     	if ((text == null || text.isEmpty() || text.equals("")) || (key == null || key.isEmpty() || key.equals("")))
     	{
-    		//do nothing
+    		Context context = getApplicationContext();
+    		CharSequence pop = "input not valid !";
+    		int duration = Toast.LENGTH_SHORT;
+
+    		Toast toast = Toast.makeText(context, pop, duration);
+    		toast.show();
     	}
     	else
     	{

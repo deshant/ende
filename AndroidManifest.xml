@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="deshant.ende"
-    android:versionCode="1"
-    android:versionName="1.0" android:installLocation="auto">
+    android:installLocation="auto"
+    android:versionCode="7"
+    android:versionName="3.2" >
 
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="19" />
 
-    
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -46,6 +46,62 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="deshant.ende.Caesar" />
+        </activity>
+        <activity
+            android:name=".Vigenere"
+            android:label="@string/title_activity_vigenere"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="deshant.ende.MainActivity" />
+        </activity>
+        <activity
+            android:name=".V_act"
+            android:label="@string/title_activity_v_act"
+            android:parentActivityName=".Vigenere" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="deshant.ende.Vigenere" />
+        </activity>
+        <activity
+            android:name=".Info"
+            android:label="@string/title_activity_info"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="deshant.ende.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Vig_auto"
+            android:label="@string/title_activity_vig_auto"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="deshant.ende.MainActivity" />
+        </activity>
+        <activity
+            android:name=".V_auto_act"
+            android:label="@string/title_activity_v_auto_act"
+            android:parentActivityName=".Vig_auto" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="deshant.ende.Vig_auto" />
+        </activity>
+        <activity
+            android:name=".Atbash"
+            android:label="@string/title_activity_atbash"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="deshant.ende.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Atbash_act"
+            android:label="@string/title_activity_atbash_act"
+            android:parentActivityName=".Atbash" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="deshant.ende.Atbash" />
         </activity>
     </application>
 

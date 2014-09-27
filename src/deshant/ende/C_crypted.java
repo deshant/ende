@@ -12,10 +12,10 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class C_crypted extends ActionBarActivity {
@@ -38,12 +38,11 @@ public class C_crypted extends ActionBarActivity {
 			plain_text = message.getBytes("US-ASCII");
 		} catch (UnsupportedEncodingException e) {
 			
-			//eclipse/ADT forced me to implement this block, even if exception is rare here.
-			//i don't know much about the control flow in java, so did nothing to prevent further exec
 		}
 	    
 	    String kvalue = intent.getStringExtra(Caesar.KEY);
 	    int key = Integer.parseInt(kvalue) % 26;
+	    int x = 0;
 	    
 	    // seeming complex (not really) encryption begins !
 	    for (int i = 0; i < plain_text.length; i++)
@@ -59,8 +58,8 @@ public class C_crypted extends ActionBarActivity {
 	    	  }
 	    	  else
 	    	  {
-	    		  key = (key + value) - 90;
-	    		  plain_text[i] = (byte) (key + 64);
+	    		  x = value + key - 90;
+	    		  plain_text[i] = (byte) (x + 64);
 	    	  }
 	      }
 	      else if(value >= 97 && value <= 122)
@@ -72,8 +71,8 @@ public class C_crypted extends ActionBarActivity {
 	    	  }
 	    	  else
 	    	  {
-	    		  key = (key + value) - 122;
-	    		  plain_text[i] = (byte) (key + 96);
+	    		  x = (key + value) - 122;
+	    		  plain_text[i] = (byte) (x + 96);
 	    	  }	    	  
 	      }
 	      else
@@ -83,7 +82,6 @@ public class C_crypted extends ActionBarActivity {
 		try {
 			crypt = new String(plain_text, "US-ASCII");
 		} catch (UnsupportedEncodingException e) {
-			//exception and error handling (AGAIN !!), this time i let the following mysterious function exist
 			e.printStackTrace();
 		}
 
@@ -98,11 +96,18 @@ public class C_crypted extends ActionBarActivity {
 	    Button btn = (Button)getLayoutInflater().inflate(R.layout.template_btn, null);
         btn.setText("COPY");
         btn.setId(3);
+        btn.setTextSize(15);
         btn.setGravity(Gravity.BOTTOM);
         btn.setTextAppearance(this, R.style.btnStyleBeige);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            	Context context = getApplicationContext();
+        		CharSequence pop = "Text Copied !";
+        		int duration = Toast.LENGTH_SHORT;
+
+        		Toast toast = Toast.makeText(context, pop, duration);
+        		toast.show();
                 putText(v);
             }
         });
@@ -147,7 +152,6 @@ public class C_crypted extends ActionBarActivity {
         m_Scroll = new ScrollView(this);
         m_Scroll.addView(layout);
         setContentView(m_Scroll);
-        //setContentView(layout);
 	}
 
 	

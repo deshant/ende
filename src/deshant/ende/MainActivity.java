@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,17 +25,7 @@ public class MainActivity extends ActionBarActivity {
 
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             return true;
@@ -49,7 +38,30 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(this, Caesar.class);
         startActivity(intent);
     }
-
+    
+    /** Called when the user clicks the Vigenere Cipher button */
+    public void vigenere(View view) {
+        Intent intent = new Intent(this, Vigenere.class);
+        startActivity(intent);
+    }
+    
+    /** Called when the user clicks the info button */
+    public void info(View view) {
+        Intent intent = new Intent(this, Info.class);
+        startActivity(intent);
+    }
+    
+    /** Called when the user clicks the Vigenere Cipher button */
+    public void vig_auto(View view) {
+        Intent intent = new Intent(this, Vig_auto.class);
+        startActivity(intent);
+    }
+    
+    /** Called when the user clicks the Atbash Cipher button */
+    public void atbash(View view) {
+        Intent intent = new Intent(this, Atbash.class);
+        startActivity(intent);
+    }
 
     /**
      * A placeholder fragment containing a simple view.

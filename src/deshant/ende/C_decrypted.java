@@ -12,10 +12,10 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class C_decrypted extends ActionBarActivity {
 	
@@ -36,11 +36,12 @@ public class C_decrypted extends ActionBarActivity {
 			plain_text = message.getBytes("US-ASCII");
 		} catch (UnsupportedEncodingException e) {
 			
-			//error and abort
+			//error and abort, maybe
 		}
 	    
 	    String kvalue = intent.getStringExtra(Caesar.KEY);
 	    int key = Integer.parseInt(kvalue) % 26;
+	    int x = 0;
 	    
 	    for (int i = 0; i < plain_text.length; i++)
 	    {
@@ -55,8 +56,8 @@ public class C_decrypted extends ActionBarActivity {
 	    	  }
 	    	  else
 	    	  {
-	    		  key = 65 - (value - key);
-	    		  plain_text[i] = (byte) (91- key);
+	    		  x = 65 - (value - key);
+	    		  plain_text[i] = (byte) (91- x);
 	    	  }
 	      }
 	      else if(value >= 97 && value <= 122)
@@ -68,8 +69,8 @@ public class C_decrypted extends ActionBarActivity {
 	    	  }
 	    	  else
 	    	  {
-	    		  key = 97 - (value - key);
-	    		  plain_text[i] = (byte) (123 - key);
+	    		  x = 97 - (value - key);
+	    		  plain_text[i] = (byte) (123 - x);
 	    	  }	    	  
 	      }
 	      else
@@ -94,10 +95,18 @@ public class C_decrypted extends ActionBarActivity {
 	    Button btn = (Button)getLayoutInflater().inflate(R.layout.template_btn, null);
         btn.setText("COPY");
         btn.setId(3);
+        btn.setTextSize(15);
         btn.setGravity(Gravity.BOTTOM);        
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            	Context context = getApplicationContext();
+        		CharSequence pop = "Text Copied !";
+        		int duration = Toast.LENGTH_SHORT;
+
+        		Toast toast = Toast.makeText(context, pop, duration);
+        		toast.show();
+            	
                 putText(v);
             }
         });
