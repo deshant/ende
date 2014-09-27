@@ -1,0 +1,29 @@
+ENDE CLASSIC
+------------
+ABOUT DEV:
+
+Deshant Sharma, India
+deshant_sharma@outlook.com
+------------
+PLEASE NOTE:
+
+the app is not meant for state-of-the-art security solutions, and the algorithms used are vulnerable to attacks.
+The developer does not take any responsibility of loss of any confidential information which was encrypted using this app.
+The developer has not designed any algorithm used here.
+The developer shall not be held responsible, if your phone turns into a nuke, or kills your cat or even bites you.
+
+Thank you for installing ENDE Classic.
+
+------------
+USING:
+
+Please provide input to all fields, otherwise encrypt/decrypt button will not work.
+Also use the key with at least 1 alphabet or key will not be accepted.
+
+------------
+DESCRIPTION:
+
+ENDE is an android app which demonstrates some simple implementations of algorithms used when cryptography came into existence. The schemes used are simple to implement.
+These ciphers can easily be used to encrypt text with the help of mere pen and paper, yet some of them proved to be fairly secure and hard to break at that time.
+
+------------
