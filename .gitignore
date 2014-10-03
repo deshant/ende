@@ -1,7 +1,11 @@
+
 bin/
-bin/
-assets/
+
 .settings/
 .classpath
 .proguard-project
+project.properties
+.classpath
+.project
+proguard-project.txt
 project.properties
