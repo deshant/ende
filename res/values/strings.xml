@@ -18,14 +18,14 @@
     <string name="vigenere">Vigenere Cipher</string>
     <string name="title_activity_vigenere">Vigenere Cipher</string>
     <string name="title_activity_v_act">Vigenere Cipher</string>
-    <string name="vig_auto">Vigenere-AutoKey</string>
+    <string name="vig_auto">Vigenere AutoKey</string>
     <string name="description">Information about the app</string>
     <string name="title_activity_info">Info</string>
-    <string name="title_activity_vig_auto">Vigenere-AutoKey</string>
-    <string name="title_activity_v_auto_act">Vigenere-AutoKey</string>
+    <string name="title_activity_vig_auto">Vigenere AutoKey</string>
+    <string name="title_activity_v_auto_act">Vigenere AutoKey</string>
     <string name="atbash">Atbash Cipher</string>
     <string name="title_activity_atbash">Atbash</string>
-    <string name="title_activity_atbash_act">Atbash_act</string>
+    <string name="title_activity_atbash_act">Converted Output</string>
     <string name="process">process</string>
     <string name="help">About</string>
 
